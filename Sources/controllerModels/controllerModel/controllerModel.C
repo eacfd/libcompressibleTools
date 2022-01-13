@@ -29,8 +29,10 @@ autoPtr<controllerModel> controllerModel::New
 
     Info<< "Selecting controllerModel type " << modelType << endl;
 
-    dictionaryConstructorTable::iterator cstrIter =
-	dictionaryConstructorTablePtr_->find(modelType);
+//    dictionaryConstructorTable::iterator cstrIter =
+//       dictionaryConstructorTablePtr_->find(modelType);
+
+    auto cstrIter = dictionaryConstructorTablePtr_->find(modelType);
 
     if (cstrIter == dictionaryConstructorTablePtr_->end())
     {
